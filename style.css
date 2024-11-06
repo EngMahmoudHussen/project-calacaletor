@@ -1,0 +1,189 @@
+:root{
+--Strongcyan: hsl(172, 67%, 45%);
+--Verydarkcyan: hsl(183, 100%, 15%);
+--Darkgrayishcyan: hsl(186, 14%, 43%);
+--Grayishcyan: hsl(184, 14%, 56%);
+--Lightgrayishcyan: hsl(185, 41%, 84%);
+--Verylightgrayishcyan: hsl(189, 41%, 97%);
+--White: hsl(0, 0%, 100%);
+}
+@font-face{
+font-family: 'cairo';
+src: url(Space_Mono/SpaceMono-Bold.ttf);
+}
+@font-face{
+font-family: 'BoldItalic';
+src: url(Space_Mono/SpaceMono-BoldItalic.ttf);
+}
+@font-face{
+font-family: 'Italic';
+src: url(Space_Mono/SpaceMono-Italic.ttf);
+}
+@font-face{
+font-family: 'Regular';
+src: url(Space_Mono/SpaceMono-Regular.ttf);
+}
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+font-family: 'cairo','BoldItalic', 'Italic','Regular' ;
+}
+body{
+width: 100%;
+min-height: 100vh;
+background-color: var(--Lightgrayishcyan);
+}
+header{
+text-align: center;
+width: 50%;
+margin: 30px auto;
+}
+header h1{
+letter-spacing: 10px;
+text-transform: uppercase;
+color: var(--Darkgrayishcyan);
+}
+main{
+background-color: var(--White);
+height: 100vh;
+padding: 20px;
+border-top-left-radius: 25px;
+border-top-right-radius: 25px;
+}
+main .left label{
+color: var(--Darkgrayishcyan);
+display: block;
+margin-bottom: 5px;
+}
+main .left .bill , main .left .pepole{
+position: relative;
+margin: 20px;
+} 
+main .left .bill p, main .left .pepole p{
+position: absolute;
+top: 0;
+right: 0;
+color: red;
+font-size: 14px;
+font-family: Arial, Helvetica, sans-serif;
+display: none;
+}
+main .left .bill input , main .left .pepole input{
+width: 100%;
+border: none;
+background-color: var(--Verylightgrayishcyan);
+padding: 15px;
+border-radius: 15px;
+font-size: 18px;
+text-align: right;
+} 
+main .left .bill img ,main .left .pepole img{
+position: absolute;
+left: 15px;
+top: 45px;
+z-index: 10;
+}
+main .left .tip .buttons{
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+main .left .buttons .top , main .left .buttons .bottom{
+display: flex;
+flex-direction: column;
+width: 45%;
+}
+main .left .buttons .bottom input{
+width: 100%;
+height: 50px;
+background-color: var(--Lightgrayishcyan);
+font-size: 20px;
+border: none;
+border-radius: 7px;
+text-align: center;
+margin: 5px 0;
+}
+main .left .buttons button{
+margin: 5px 0;
+padding: 8px;
+background-color: var(--Verydarkcyan);
+color: var(--White);
+font-size: 20px;
+border-radius: 7px;
+transition: .5s;
+}
+main .left .tip .buttons button:hover{
+background-color: var(--Strongcyan);
+}
+main .right{
+background-color: var(--Verydarkcyan);
+border-radius: 10px;
+padding: 25px;  
+}
+main .right p{
+color: var(--White);
+}
+ main .right h2{
+color: var(--Strongcyan);
+}
+main .right p span{
+color: var(--Grayishcyan);
+}
+main .right .tip-amount,main .right .total{
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin: 15px 0;
+}
+main .right button{
+width: 100%;
+padding: 10px;
+background-color: var(--Strongcyan);
+font-size: 18px;
+text-transform: uppercase;
+color: var(--Verydarkcyan);
+border-radius: 8px;
+}
+@media (min-width:1000px){
+header{
+margin-bottom: 120px;
+}
+header h1{
+margin-top: 80px;
+}
+main{
+display: flex;
+justify-content: space-between;
+align-items: center;
+height: 100%;
+width: 70%;
+margin: 0 auto;
+border-radius: 15px;
+}
+main .left, main .right{
+width: 45%;
+}
+main .right button{
+margin-top: 200px;
+}
+main .left .tip .buttons{
+display: block;
+}
+main .left .tip .buttons .top, main .left .tip .buttons .bottom{
+flex-direction: row;
+width: 100%;
+justify-content: space-between;
+align-items: center;
+}
+main .left .tip .buttons button{
+width: 90%;
+margin: 10px;
+}
+main .left .tip .buttons .bottom{
+width: 95%;
+margin: 10px;
+}
+
+}
+
